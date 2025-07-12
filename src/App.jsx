@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import { TenantProvider } from './context/TenantContext';
 import { getTenantFromURL } from './utils/getTenantFromURL';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import AppRoutes from './Routes';
 
 function App() {
+  const queryClient = new QueryClient();
   const [tenant, setTenant] = useState(null);
 
 
@@ -34,9 +36,11 @@ console.log('tenant',tenant);
   if (!tenant) return <div>Loading...</div>;
 
   return (
+     <QueryClientProvider client={queryClient}>
     <TenantProvider tenant={tenant}>
       <AppRoutes />
     </TenantProvider>
+    </QueryClientProvider>
   );
 }
 
