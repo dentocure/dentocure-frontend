@@ -28,7 +28,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: username/my-react-app:latest
+          tags: dentocure/dentocure-frontend:latest
 
       # - name: 🚀 Trigger Deploy on Render
       #   run: |
