@@ -1,0 +1,10 @@
+{
+  "name": "Happy Smiles Dental",
+  "primaryColor": "#0D9488",
+  "logo": "/logos/clinic1-logo.png",
+  "features": {
+    "appointments": true,
+    "billing": true,
+    "inventory": false
+  }
+}
